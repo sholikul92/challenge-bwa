@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obito</title>
+    <meta
+      name="description"
+      content="Upgrade your skills with Obito! Join the platform where professionals enhance their careers with tailored programs, practical projects, and industry-leading mentors. Sign up today and start your journey to success."
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col h-screen text-md lg:text-lg font-poppins">
+    <header class="px-4 py-5 bg-white shadow-sm lg:px-18">
+      <nav class="flex items-center justify-between">
+        <div class="flex items-center gap-16">
+          <img src="img/logo.svg" alt="logo" />
+          <ul class="hidden gap-8 lg:flex">
+            <li class="font-semibold"><a href="#">Home</a></li>
+            <li><a href="#">Preacing</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="hidden gap-4 lg:flex">
+          <img src="img/device-message.svg" alt="device-message" />
+          <div class="flex gap-2 px-4 border-l border-l-border">
+            <button class="px-4 py-2 border rounded-full cursor-pointer border-border">Sign Up</button>
+            <button class="px-4 py-2 text-white rounded-full cursor-pointer bg-button">My Account</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex flex-1 bg-foreground lg:pl-4">
+      <div class="flex-1 p-4 m-4 bg-white border-2 lg:m-16 border-border rounded-4xl">
+        <form action="" class="flex flex-col gap-4 lg:gap-2">
+          <h3 class="text-xl font-bold">Upgrade Your Skills</h3>
+          <div class="w-24 h-24 p-4 text-center border rounded-full border-border">
+            <label for="photo">Add Photo</label>
+            <input type="file" name="photo" id="photo" class="hidden" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="name" class="font-light">Complete Name</label>
+            <div class="flex gap-2 p-2 border rounded-full border-border hover:border-button focus-within:border-button">
+              <img src="img/profile.svg" alt="profile-logo" />
+              <input type="text" name="name" id="name" placeholder="Type your name" class="flex-1 outline-none" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="occupation" class="font-light">Occupation</label>
+            <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
+              <img src="img/briefcase.svg" alt="briefcase-logo" />
+              <input type="text" name="occupation" id="occupation" placeholder="Type your occupation" class="flex-1 outline-none" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-light">Email Address</label>
+            <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
+              <img src="img/sms.svg" alt="message-logo" />
+              <input type="email" name="email" id="email" placeholder="Type your valid email address" class="flex-1 outline-none" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="password" class="font-light">Password</label>
+            <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
+              <img src="img/shield-security.svg" alt="shield-security-logo" />
+              <input type="password" name="password" id="password" placeholder="Type your valid password" class="flex-1 outline-none" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="confirmPassword" class="font-light">Confirm Password</label>
+            <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
+              <img src="img/shield-security.svg" alt="shield-security-logo" />
+              <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Type your valid password" class="flex-1 outline-none" />
+            </div>
+          </div>
+          <button class="p-2 mt-2 text-white rounded-full cursor-pointer bg-button">Create My Account</button>
+        </form>
+      </div>
+
+      <img src="img/banner.png" alt="banner" class="hidden lg:block" />
+    </main>
+  </body>
+</html>
