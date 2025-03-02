@@ -11,7 +11,7 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="flex flex-col h-screen text-md lg:text-lg font-poppins">
-    <header class="px-4 py-5 bg-white shadow-sm lg:px-18">
+    <header class="px-4 py-5 bg-white border-b border-b-border lg:px-18">
       <nav class="flex items-center justify-between">
         <div class="flex items-center gap-16">
           <img src="img/logo.svg" alt="logo" />
@@ -32,53 +32,94 @@
       </nav>
     </header>
     <main class="flex flex-1 bg-foreground lg:pl-4">
-      <div class="flex-1 p-4 m-4 bg-white border-2 lg:m-16 border-border rounded-4xl">
-        <form action="" class="flex flex-col gap-4 lg:gap-2">
-          <h3 class="text-xl font-bold">Upgrade Your Skills</h3>
-          <div class="w-24 h-24 p-4 text-center border rounded-full border-border">
-            <label for="photo">Add Photo</label>
-            <input type="file" name="photo" id="photo" class="hidden" />
+      <div class="flex-1 p-4 m-4 bg-white border-2 lg:p-8 lg:m-16 border-border rounded-4xl">
+        <form method="post" class="flex flex-col gap-4">
+          <h3 class="text-2xl font-bold">Upgrade Your Skills</h3>
+          <div class="flex items-center gap-4">
+            <div class="w-24 h-24 overflow-hidden text-center border rounded-full border-border">
+              <div id="wrap-input-file" class="m-4 mt-5">
+                <label for="photo" class="font-semibold cursor-pointer">Add Photo</label>
+                <input type="file" name="photo" id="photo" class="hidden" />
+              </div>
+              <img id="image-preview" class="hidden object-cover object-center w-full h-auto" width="100" height="100" />
+            </div>
+            <button type="button" id="btn-remove-image" class="hidden p-2 text-sm font-semibold text-red-600 bg-red-200 rounded-full cursor-pointer">
+              DELETE PHOTO
+            </button>
+            <p id="error-message" class="hidden text-red-600">type file is not valid</p>
           </div>
           <div class="flex flex-col gap-2">
             <label for="name" class="font-light">Complete Name</label>
             <div class="flex gap-2 p-2 border rounded-full border-border hover:border-button focus-within:border-button">
               <img src="img/profile.svg" alt="profile-logo" />
-              <input type="text" name="name" id="name" placeholder="Type your name" class="flex-1 outline-none" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Type your name"
+                class="flex-1 font-semibold outline-none placeholder:font-normal"
+              />
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <label for="occupation" class="font-light">Occupation</label>
             <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
               <img src="img/briefcase.svg" alt="briefcase-logo" />
-              <input type="text" name="occupation" id="occupation" placeholder="Type your occupation" class="flex-1 outline-none" />
+              <input
+                type="text"
+                name="occupation"
+                id="occupation"
+                placeholder="Type your occupation"
+                class="flex-1 font-semibold outline-none placeholder:font-normal"
+              />
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <label for="email" class="font-light">Email Address</label>
             <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
               <img src="img/sms.svg" alt="message-logo" />
-              <input type="email" name="email" id="email" placeholder="Type your valid email address" class="flex-1 outline-none" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Type your valid email address"
+                class="flex-1 font-semibold outline-none placeholder:font-normal"
+              />
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <label for="password" class="font-light">Password</label>
             <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
               <img src="img/shield-security.svg" alt="shield-security-logo" />
-              <input type="password" name="password" id="password" placeholder="Type your valid password" class="flex-1 outline-none" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Type your valid password"
+                class="flex-1 font-semibold outline-none placeholder:font-normal"
+              />
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <label for="confirmPassword" class="font-light">Confirm Password</label>
             <div class="flex gap-2 p-2 border rounded-full hover:border-button focus-within:border-button border-border">
               <img src="img/shield-security.svg" alt="shield-security-logo" />
-              <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Type your valid password" class="flex-1 outline-none" />
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder="Type your valid password"
+                class="flex-1 font-semibold outline-none placeholder:font-normal"
+              />
             </div>
           </div>
-          <button class="p-2 mt-2 text-white rounded-full cursor-pointer bg-button">Create My Account</button>
+          <button class="p-2 mt-2 font-semibold text-white rounded-full cursor-pointer bg-button">Create My Account</button>
         </form>
       </div>
 
       <img src="img/banner.png" alt="banner" class="hidden lg:block" />
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
